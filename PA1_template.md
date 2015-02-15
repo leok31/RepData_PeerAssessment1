@@ -1,7 +1,7 @@
 # Reproducible Research: Peer Assessment 1
 
 
-### Loading and preprocessing the data
+### Loading and preprocessing the data - te3st change 2
 
 ```r
 #unzip and load the data into R

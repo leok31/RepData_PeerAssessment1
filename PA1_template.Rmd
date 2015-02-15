@@ -6,7 +6,7 @@ output:
 ---
 
 
-### Loading and preprocessing the data
+### Loading and preprocessing the data - te3st change 2
 ````{r reading_data}
 #unzip and load the data into R
 data <- read.csv(unz(filename = "activity.csv", description = "activity.zip"))
