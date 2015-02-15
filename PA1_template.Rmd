@@ -6,7 +6,7 @@ output:
 ---
 
 
-### Loading and preprocessing the data - te3st change 2
+### Loading and preprocessing the data
 ````{r reading_data}
 #unzip and load the data into R
 data <- read.csv(unz(filename = "activity.csv", description = "activity.zip"))
@@ -147,7 +147,7 @@ ggplot(all.data, aes(x = steps)) +
   ylab("Frequency")
 ````
 
-d. Imact  
+d. **Imact**  
 We can see that the mean and median are the same. From the box plot we can see that when we remove NAs and replace them with the mean value for each interval, the IQR get smaller and we get a few more outliers.
 From the side-by-side histogram we see that the overall shape has not changed but the frequency of the highest bin range has increased.
 
