@@ -1,14 +1,14 @@
 # Reproducible Research: Peer Assessment 1
 
 
-## Loading and preprocessing the data
+### Loading and preprocessing the data
 
 ```r
 #unzip and load the data into R
 data <- read.csv(unz(filename = "activity.csv", description = "activity.zip"))
 ```
 
-## What is mean total number of steps taken per day?
+### What is mean total number of steps taken per day?
 
 
 ```r
@@ -39,8 +39,8 @@ steps_median <- median(summary$steps, na.rm = T)
 1. The **mean** total number of steps taken each day is 10,766  
 2. The **median** total number of steps taken each day is 10,765
 
-## What is the average daily activity pattern?
-###Part 1
+### What is the average daily activity pattern?
+####Part 1
 
 ```r
  #aggregate the data by interval 
@@ -56,7 +56,7 @@ steps_median <- median(summary$steps, na.rm = T)
 
 ![plot of chunk time_series](./PA1_template_files/figure-html/time_series.png) 
 
-###Part 2
+####Part 2
 
 
 ```r
@@ -67,7 +67,7 @@ top_interval <- summary_interval[summary_interval$steps == max(summary_interval$
 The time inverval is the **highest average number of steps** is 835
 
 
-## Imputing missing values
+### Imputing missing values
 
 1. Number of NAs
 
@@ -163,10 +163,10 @@ ggplot(all.data, aes(x = steps)) +
 ![plot of chunk compare_histogram](./PA1_template_files/figure-html/compare_histogram.png) 
 
 d. Imact  
-We can see that the mean and median are now the same. From the box plot we can see that when we remove NAs and replace them with the mean value for each interval, the IQR get smaller and we get a few more outliers.
+We can see that the mean and median are the same. From the box plot we can see that when we remove NAs and replace them with the mean value for each interval, the IQR get smaller and we get a few more outliers.
 From the side-by-side histogram we see that the overall shape has not changed but the frequency of the highest bin range has increased.
 
-## Are there differences in activity patterns between weekdays and weekends?
+### Are there differences in activity patterns between weekdays and weekends?
 
 
 ```r
@@ -194,6 +194,6 @@ ggplot(data = weekend_summary, aes(x = interval, y = mean, colour = isweekend)) 
 
 ![plot of chunk draw_line_graph](./PA1_template_files/figure-html/draw_line_graph.png) 
 
-Analysis:  
+#####Analysis:  
 From the 2 plots we can see that during the weekdays most of the walking happens betweeen 5:30am and 8:30am. Very little is done during the evening period from 8pm onwards. 
 On the other hand, during the weekend, the walking is more spread out, there is not as much fluctuation throughout the day. Most of the walking is done from about 8:30am, very little is done before this time. Lastly, more walking is done in the evenining from about 8pm then during the weekdays.
